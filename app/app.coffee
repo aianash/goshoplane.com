@@ -43,7 +43,9 @@ app.use favicon(__dirname + '/styles/favicon.ico')
 # app.use express.static(__dirname + '/home',    maxAge: 31557600000)
 
 
-app.use '/fonts', express.static(__dirname + '/styles/fonts')
+app.use '/fonts', express.static(__dirname + '/fonts')
+app.use '/styles', express.static(__dirname + '/styles')
+app.use '/images', express.static(__dirname + '/images')
 
 
 # Add api routes file name from the routes directory

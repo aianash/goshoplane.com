@@ -1,10 +1,142 @@
 doctype html
 html(lang="en")
   head
-    title Shoplane 1.0
+    title Shoplane
+    link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Lato:300|Source+Sans+Pro:300|Pacifico")
     //- main:css
     //- endinject
+    //- favicon:ico
+    //- endinject
   body
-    p hello world
+    header
+        div.row
+            div.small-3.columns Shoplane
+            div.small-6.columns
+                ul.inline-list
+                    li
+                        a.button.round.subscribe.tiny Notify me !
+                    li
+                        a(href="/business") For Business
+
+    section#intro
+        div.container.row
+            div.small-12.columns.small-centered.content
+                h1.title The largest selection of product is around you
+                h1.discover
+                    span.normal Discover them using
+                    span.alt i
+                    span.cross e&nbsp;
+                    span.new Commerce
+                div#large-logo
+                    div.wrap
+                        div.shard-wrap
+                            div.shard
+                        div.shard-wrap
+                            div.shard
+                        div.shard-wrap
+                            div.shard
+                        div.shard-wrap
+                            div.shard
+                        div.shard-wrap
+                            div.shard
+    section#explore
+        div.container.row
+            div.small-6.columns
+                h1.title
+                    span.purple Shopping
+                    | to discover your new look ?
+                ul.subtext
+                    li.row
+                        i.purple.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Cupcake ipsum dolor sit amet toffee.
+                            Jujubes icing danish oat cake.
+                    li.row
+                        i.purple.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Cotton candy liquorice cupcake danish danish bonbon.
+                            Gummi bears caramels macaroon jelly beans tart.
+            div.small-6.columns
+                img(src="/images/3.png")
+    section#map
+        div.container.row
+            div.small-6.columns
+                img(src="/images/2.png")
+            div.small-6.columns
+                h1.title
+                    span.green Shopping
+                    | to explore new venues ?
+                ul.subtext
+                    li.row
+                        i.green.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Cheesecake tootsie roll brownie.
+                            I love cake tootsie roll bonbon wafer chocolate bar.
+                    li.row
+                        i.green.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Tiramisu sugar plum chupa chups liquorice cupcake danish.
+                            Cotton candy liquorice cupcake danish danish bonbon.
+    section#hangout
+        div.container.row
+            div.small-6.columns
+                h1.title
+                    | or maybe&nbsp;
+                    span.orange Shopping
+                    | for an excuse to hangout ?
+                ul.subtext
+                    li.row
+                        i.orange.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Jelly beans candy fruitcake pudding sesame snaps jelly topping I love.
+                            Chocolate jelly beans I love.
+                    li.row
+                        i.orange.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Cupcake ipsum dolor sit amet chocolate cake.
+                            I love jelly-o soufflé danish lemon drops muffin croissant powder ice cream.
+            div.small-6.columns
+                img(src="/images/4.png")
+    section#plans
+        div.container.row
+            div.small-6.columns
+                img(src="/images/1.png")
+            div.small-6.columns
+                h1.title
+                    | whatever the reason, <br> plan your next&nbsp;
+                    span.red Shopping
+                    | with Shoplane
+                ul.subtext
+                    li.row
+                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Cupcake ipsum dolor sit amet biscuit oat cake oat cake toffee.
+                            Apple pie powder dessert.
+                    li.row
+                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Cupcake I love icing chocolate cake marshmallow icing cheesecake I love.
+                form#subscribe(name="subscribe")
+                    div#inputs.row
+                        div.large-14.columns
+                            div.row.collapse
+                                div.small-10.columns
+                                    input#email(type="text" placeholder="Your email id" name="email")
+                                div.small-4.columns
+                                    a.button.postfix I wanna know !
+
+    section#footer
+        div.row
+            div.small-14.columns
+                ul.inline-list
+                    li
+                        a(href="/about") About
+                    li
+                        a(href="/team") Team
+                    li
+                        a(href="/business") For Business
+
     //- vendor:js
+    //- endinject
+    //- goshoplane:js
     //- endinject

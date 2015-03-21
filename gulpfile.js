@@ -88,6 +88,10 @@ gulp.task('styles', function() {
                 { style: 'compressed' } :
                 { style: 'expanded' };
 
+  options.loadPath = ['bower_components/normalize.css',
+                      'bower_components/foundation/scss',
+                      'bower_components/ionicons/scss'];
+
   var sassStream = plugins.rubySass('app/styles/main.scss', options)
       .pipe(plugins.autoprefixer('last 1 Chrome version', 'last 3 iOS versions', 'last 3 Android versions'))
 
@@ -102,7 +106,14 @@ gulp.task('styles', function() {
 gulp.task('fonts', function() {
   return gulp
     .src(['app/styles/fonts/*.*', 'bower_components/ionicons/fonts/*.*'])
-    .pipe(gulp.dest(path.join(targetDir, 'styles/fonts')))
+    .pipe(gulp.dest(path.join(targetDir, 'fonts')))
+    .on('error', errorHandler);
+});
+
+gulp.task('images', function () {
+  return gulp
+    .src('app/images/**/*')
+    .pipe(gulp.dest(path.join(targetDir, 'images/')))
     .on('error', errorHandler);
 });
 
@@ -158,7 +169,7 @@ gulp.task('serve', function() {
 // start watchers
 gulp.task('watchers', function() {
   plugins.livereload.listen();
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles', 'index']);
   gulp.watch('app/views/**/*.jade', ['views']);
   gulp.watch('app/styles/fonts/**', ['fonts']);
   // gulp.watch('app/images/**', ['images']);
@@ -185,6 +196,7 @@ gulp.task('default', function(done){
       // 'views',
       'styles',
       'favicon',
+      'images',
       'config'
     ],
     'index',
