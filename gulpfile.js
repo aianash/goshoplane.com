@@ -117,17 +117,23 @@ gulp.task('images', function () {
     .on('error', errorHandler);
 });
 
-gulp.task('favicon', function() {
-  return gulp
-    .src('app/styles/favicon.ico')
-    .pipe(gulp.dest(path.join(targetDir, 'styles')))
-    .on('error', errorHandler);
-});
-
 gulp.task('views', function() {
   return gulp
     .src('app/views/**/*.jade')
     .pipe(gulp.dest(path.join(targetDir, 'views')))
+    .on('error', errorHandler);
+});
+
+gulp.task('vendor', function() {
+  var vendorFiles = require('./vendor.json');
+
+  return gulp.src(vendorFiles)
+    .pipe(plugins.concat('vendor.js'))
+    .pipe(plugins.if(build, plugins.uglify()))
+    .pipe(plugins.if(build, plugins.rev()))
+
+    .pipe(gulp.dest(path.join(targetDir, 'scripts')))
+
     .on('error', errorHandler);
 });
 
@@ -147,7 +153,9 @@ gulp.task('index', function() {
   return gulp.src('app/views/home.jade')
     // inject css
     .pipe(plugins.inject(gulp.src(cssNaming, { cwd: targetDir }), {name: 'main'}))
-    .pipe(plugins.inject(gulp.src('vendor*.js', { cwd: targetDir }), {name: 'vendor'}))
+    .pipe(plugins.inject(gulp.src('scripts/goshoplane.js', { cwd: targetDir }), {name: 'goshoplane'}))
+    .pipe(plugins.inject(gulp.src('scripts/vendor-*.js', { cwd: targetDir }), {name: 'vendor'}))
+    // .pipe(plugins.inject(gulp.src('vendor*.js', { cwd: targetDir }), {name: 'vendor'}))
     // inject app.js (build) or all js files indivually (dev)
     // .pipe(plugins.if(build,
     //   _inject(gulp.src('app*.js', { cwd: targetDir }), 'app'),
@@ -192,10 +200,11 @@ gulp.task('default', function(done){
     [
       'coffeelint',
       'compile',
+      'vendor',
       'fonts',
       // 'views',
       'styles',
-      'favicon',
+      // 'favicon',
       'images',
       'config'
     ],

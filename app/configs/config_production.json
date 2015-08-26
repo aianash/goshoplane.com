@@ -1,7 +1,7 @@
 {
   "server": {
     "port": 8080,
-    "host": "localhost"
+    "host": "10.130.123.170"
   },
   "mailchimp": {
     "apiKey": "e0eed0fc87838f643c21be8e12f1da6f-us11",

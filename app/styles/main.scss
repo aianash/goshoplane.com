@@ -16,6 +16,7 @@ $handwriting-font: "Pacifico", cursive;
 .green {color: #1abc9c;}
 .purple {color: #9b59b6;}
 .orange {color: #f39c12;}
+.blue {color: #0267a2;}
 
 body {
 	color: white;
@@ -27,12 +28,21 @@ body {
 
 header {
 	height: 100px;
-	background-color: #1f1f1f;
+	background-color: #0277bd;
 	opacity: 0.7;
 	width: 100%;
 	z-index: 999;
-	position: relative;
+	position: absolute;
 	padding: 30px;
+
+	img {
+		margin-top: -48px;
+		height: 140px;
+	}
+
+	a {
+		color: white;
+	}
 }
 
 header .subscribe {
@@ -63,11 +73,7 @@ section {
 			&::after {
 				content: "  ";
 			}
-
-
 		}
-
-
 	}
 
 	.subtext {
@@ -84,116 +90,12 @@ section {
 	}
 }
 
-#large-logo {
-	margin-top: 30px;
-
-	.wrap {
-		height: 400px;
-		width: 400px;
-		margin-right: auto;
-		margin-left: auto;
-		position: relative;
-
-		.shard-wrap {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			z-index: 2;
-
-			.shard {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-			}
-
-			&:nth-child(1) .shard {
-				-webkit-clip-path: polygon(29.65% 67%, 67.85% 67%, 81% 57%, 40.65% 52.286%);
-				background-color: #e74c3c;
-			}
-
-			&:nth-child(2) .shard {
-				-webkit-clip-path: polygon(67.65% 67%, 89.85% 67%, 80.65% 57.286%);
-				background-color: #c0392b;
-			}
-
-			&:nth-child(3) .shard {
-				-webkit-clip-path: polygon(93.65% 48%, 89.85% 67%, 80.65% 57.286%);
-				background-color: #16a085;
-			}
-
-			&:nth-child(4) .shard {
-				-webkit-clip-path: polygon(84.65% 45%, 93.85% 48%, 81% 57%, 40.65% 52.286%);
-				background-color: #1abc9c;
-			}
-
-			&:nth-child(5) .shard {
-				-webkit-clip-path: polygon(93.65% 48%, 92.85% 49%, 97% 68%, 90.65% 62.286%);
-				background-color: #2980b9;
-			}
-		}
-
-	}
-}
-
 #intro {
 	background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url("/images/intro.jpg") no-repeat center center fixed;
 	background-size: cover;
 	min-width: 100%;
 	min-height: 100%;
-	margin-top: -100px;
-
-	.content {
-		text-align: center;
-	}
-
-	.title {
-		margin: 0;
-	}
-
-	.discover {
-		font-family: $content-font;
-		margin: 0;
-		margin-top:30px;
-		position: relative;
-		color: white;
-
-		span.normal {margin-right: 10px;}
-
-		span.cross {
-			// transform: rotate(-14deg);
-			display: inline-block;
-			position: relative;
-			// bottom: -30px;
-			color: #27ae60;
-			font-family: $handwriting-font;
-
-			&::after {
-				content: " ";
-			}
-
-			&::before {
-				content: "/";
-				position: absolute;
-				left: 5px;
-				font-family: $control-font;
-				font-size: 1.1em;
-				line-height: 1em;
-				top: 13px;
-			}
-		}
-
-		span.alt {
-			position: absolute;
-			top: -30px;
-			color: #2980b9;
-			font-family:  $handwriting-font;
-		}
-
-		span.new {
-			color: #2980b9;
-			font-family: $handwriting-font;
-		}
-	}
+	padding-top: 40px;
 }
 
 #explore {

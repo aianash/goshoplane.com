@@ -3,14 +3,30 @@ html(lang="en")
   head
     title Shoplane
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Lato:300|Source+Sans+Pro:300|Pacifico")
+    link(rel="apple-touch-icon", sizes="57x57", href="/images/favicon/apple-icon-57x57.png")
+    link(rel="apple-touch-icon", sizes="60x60", href="/images/favicon/apple-icon-60x60.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/images/favicon/apple-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="76x76", href="/images/favicon/apple-icon-76x76.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/images/favicon/apple-icon-114x114.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="/images/favicon/apple-icon-120x120.png")
+    link(rel="apple-touch-icon", sizes="144x144", href="/images/favicon/apple-icon-144x144.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="/images/favicon/apple-icon-152x152.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/images/favicon/apple-icon-180x180.png")
+    link(rel="icon", type="image/png", sizes="192x192", href="/images/favicon/android-icon-192x192.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/images/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="96x96", href="/images/favicon/favicon-96x96.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/images/favicon/favicon-16x16.png")
+    link(rel="manifest", href="/images/favicon/manifest.json")
+    meta(name="msapplication-TileColor", content="#ffffff")
+    meta(name="msapplication-TileImage", content="/images/favicon/ms-icon-144x144.png")
+    meta(name="theme-color", content="#ffffff")
     //- main:css
-    //- endinject
-    //- favicon:ico
     //- endinject
   body
     header
         div.row
-            div.small-3.columns Shoplane
+            div.small-3.columns
+                img(src="/images/icon.png")
             div.small-6.columns
                 ul.inline-list
                     li
@@ -20,27 +36,33 @@ html(lang="en")
 
     section#intro
         div.container.row
-            div.small-12.columns.small-centered.content
-                h1.title The largest selection of product is around you
-                h1.discover
-                    span.normal Discover them using
-                    span.alt i
-                    span.cross e&nbsp;
-                    span.new Commerce
-                div#large-logo
-                    div.wrap
-                        div.shard-wrap
-                            div.shard
-                        div.shard-wrap
-                            div.shard
-                        div.shard-wrap
-                            div.shard
-                        div.shard-wrap
-                            div.shard
-                        div.shard-wrap
-                            div.shard
+            div.small-6.columns
+                h1.title
+                    span.red Go Shopping
+                    | @ &nbsp;
+                    span.blue Go Shoplane
+                h1.title
+                    | Now shop at your nearest store with the convienence of &nbsp;
+                    span.green Ecommerce
+                ul.subtext
+                    li.row
+                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Search and add items to your wishlist
+                    li.row
+                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Create your shopping plan and invite friends
+                    li.row
+                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
+                        p.small-13.columns.
+                            Find about latest arrivals and sales, before you miss them
+            div.small-6.columns
+                img(src="/images/5.png")
     section#explore
         div.container.row
+            div.small-6.columns
+                img(src="/images/4.png")
             div.small-6.columns
                 h1.title
                     span.purple Shopping
@@ -49,19 +71,9 @@ html(lang="en")
                     li.row
                         i.purple.small-1.columns.icon.ion-ios-checkmark-outline
                         p.small-13.columns.
-                            Cupcake ipsum dolor sit amet toffee.
-                            Jujubes icing danish oat cake.
-                    li.row
-                        i.purple.small-1.columns.icon.ion-ios-checkmark-outline
-                        p.small-13.columns.
-                            Cotton candy liquorice cupcake danish danish bonbon.
-                            Gummi bears caramels macaroon jelly beans tart.
-            div.small-6.columns
-                img(src="/images/3.png")
+                            Search through a large selection of products
     section#map
         div.container.row
-            div.small-6.columns
-                img(src="/images/2.png")
             div.small-6.columns
                 h1.title
                     span.green Shopping
@@ -70,33 +82,9 @@ html(lang="en")
                     li.row
                         i.green.small-1.columns.icon.ion-ios-checkmark-outline
                         p.small-13.columns.
-                            Cheesecake tootsie roll brownie.
-                            I love cake tootsie roll bonbon wafer chocolate bar.
-                    li.row
-                        i.green.small-1.columns.icon.ion-ios-checkmark-outline
-                        p.small-13.columns.
-                            Tiramisu sugar plum chupa chups liquorice cupcake danish.
-                            Cotton candy liquorice cupcake danish danish bonbon.
-    section#hangout
-        div.container.row
+                            Explore brands and showrooms that you have never tried before
             div.small-6.columns
-                h1.title
-                    | or maybe&nbsp;
-                    span.orange Shopping
-                    | for an excuse to hangout ?
-                ul.subtext
-                    li.row
-                        i.orange.small-1.columns.icon.ion-ios-checkmark-outline
-                        p.small-13.columns.
-                            Jelly beans candy fruitcake pudding sesame snaps jelly topping I love.
-                            Chocolate jelly beans I love.
-                    li.row
-                        i.orange.small-1.columns.icon.ion-ios-checkmark-outline
-                        p.small-13.columns.
-                            Cupcake ipsum dolor sit amet chocolate cake.
-                            I love jelly-o soufflé danish lemon drops muffin croissant powder ice cream.
-            div.small-6.columns
-                img(src="/images/4.png")
+                img(src="/images/7.png")
     section#plans
         div.container.row
             div.small-6.columns
@@ -106,24 +94,14 @@ html(lang="en")
                     | whatever the reason, <br> plan your next&nbsp;
                     span.red Shopping
                     | with Shoplane
-                ul.subtext
-                    li.row
-                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
-                        p.small-13.columns.
-                            Cupcake ipsum dolor sit amet biscuit oat cake oat cake toffee.
-                            Apple pie powder dessert.
-                    li.row
-                        i.red.small-1.columns.icon.ion-ios-checkmark-outline
-                        p.small-13.columns.
-                            Cupcake I love icing chocolate cake marshmallow icing cheesecake I love.
-                form#subscribe(name="subscribe")
+                form(name="subscribe")
                     div#inputs.row
                         div.large-14.columns
                             div.row.collapse
                                 div.small-10.columns
                                     input#email(type="text" placeholder="Your email id" name="email")
                                 div.small-4.columns
-                                    a.button.postfix I wanna know !
+                                    a#subscribe.button.postfix(href="#") I wanna know !
 
     section#footer
         div.row
@@ -132,9 +110,15 @@ html(lang="en")
                     li
                         a(href="/about") About
                     li
-                        a(href="/team") Team
-                    li
                         a(href="/business") For Business
+
+    //- script(type='text/javascript')
+    //-     $("#subscribe").click(function() {
+    //-         var email = $("#email").val();
+    //-         $.post("subscribe", { "email": email }, function(data) {
+    //-             console.log("done !");
+    //-         });
+    //-     });
 
     //- vendor:js
     //- endinject

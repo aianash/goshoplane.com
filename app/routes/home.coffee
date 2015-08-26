@@ -16,3 +16,4 @@ module.exports = (app) ->
   home = require controller_path + '/home'
 
   app.get '/', urlencodedParser, home.index
+  app.post '/subscribe', bodyParser.json(), home.subscribe

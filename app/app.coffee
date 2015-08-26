@@ -5,7 +5,6 @@ errorHandler  = require 'errorhandler'
 morgan        = require 'morgan'
 bodyParser    = require 'body-parser'
 methodOverride = require 'method-override'
-favicon         = require 'serve-favicon'
 
 settings      = require __dirname + '/settings'
 logger        = require __dirname + '/utils/logger'
@@ -39,13 +38,14 @@ app.locals.title = 'Shoplane'
 
 
 app.engine 'jade', require('jade').__express
-app.use favicon(__dirname + '/styles/favicon.ico')
+# app.use favicon(__dirname + '/styles/favicon.ico')
 # app.use express.static(__dirname + '/home',    maxAge: 31557600000)
 
 
 app.use '/fonts', express.static(__dirname + '/fonts')
 app.use '/styles', express.static(__dirname + '/styles')
 app.use '/images', express.static(__dirname + '/images')
+app.use '/scripts', express.static(__dirname + '/scripts')
 
 
 # Add api routes file name from the routes directory
